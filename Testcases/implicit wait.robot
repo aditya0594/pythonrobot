@@ -20,7 +20,13 @@ LoginTest
 Implicit wait statements
 	Open Browser    https://demo.automationtesting.in/Register.html     chrome
     Maximize Browser Window
+    ${implicittime}=    Get Selenium Implicit Wait
+    Log To Console  ${implicittime}
+
     Set Selenium Implicit Wait    10  #keep wait for the 10 sec before throughing the exceptions
+
+    ${implicittime}=    Get Selenium Implicit Wait
+    Log To Console  ${implicittime}
 
     Scroll Element Into View    id:firstpassword
     Select From List By Label   id:Skills   Android1

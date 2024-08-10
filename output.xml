@@ -1,82 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.11.5 on win32)" generated="2024-08-10T23:32:59.114347" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.11.5 on win32)" generated="2024-08-11T00:49:56.841642" rpa="false" schemaversion="5">
 <suite id="s1" name="GAED" source="C:\Users\Aditya Pawar\PycharmProjects\GAED">
 <suite id="s1-s1" name="Testcases" source="C:\Users\Aditya Pawar\PycharmProjects\GAED\Testcases">
-<suite id="s1-s1-s1" name="Implicit Wait" source="C:\Users\Aditya Pawar\PycharmProjects\GAED\Testcases\implicit wait.robot">
-<test id="s1-s1-s1-t1" name="Implicit wait statements" line="20">
+<suite id="s1-s1-s1" name="Page Element ScreenShot" source="C:\Users\Aditya Pawar\PycharmProjects\GAED\Testcases\Page_Element_ScreenShot.robot">
+<test id="s1-s1-s1-t1" name="ScreenShot element" line="9">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-08-10T23:32:59.578339" level="INFO">Opening browser 'chrome' to base url 'https://demo.automationtesting.in/Register.html'.</msg>
-<arg>https://demo.automationtesting.in/Register.html</arg>
-<arg>chrome</arg>
+<msg time="2024-08-11T00:49:57.414691" level="INFO">Opening browser 'chrome' to base url 'https://practice.automationtesting.in/my-account/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-08-10T23:32:59.578339" elapsed="3.063334"/>
+<status status="PASS" start="2024-08-11T00:49:57.414691" elapsed="11.285207"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-08-10T23:33:02.646672" elapsed="3.600271"/>
+<status status="PASS" start="2024-08-11T00:50:08.703904" elapsed="0.841162"/>
 </kw>
-<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
-<arg>10</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-08-10T23:33:06.247946" elapsed="0.003998"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-08-11T00:50:09.548063" level="INFO">${email} = //input[@id='username']</msg>
+<var>${email}</var>
+<arg>//input[@id='username']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-08-11T00:50:09.547063" elapsed="0.001000"/>
 </kw>
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>id:firstpassword</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-08-10T23:33:06.252950" elapsed="0.383300"/>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-11T00:50:09.798064" level="INFO">Element '//input[@id='username']' is displayed.</msg>
+<arg>${email}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-11T00:50:09.549063" elapsed="0.249001"/>
 </kw>
-<kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2024-08-10T23:33:06.638253" level="INFO">Selecting options from selection list 'id:Skills' by label Android1.</msg>
-<msg time="2024-08-10T23:33:17.044201" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-08-10T23:33:17.045195" level="FAIL">NoSuchElementException: Message: Could not locate element with visible text: Android1; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-</msg>
-<arg>id:Skills</arg>
-<arg>Android1</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="FAIL" start="2024-08-10T23:33:06.637248" elapsed="10.413951">NoSuchElementException: Message: Could not locate element with visible text: Android1; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-</status>
+<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
+<msg time="2024-08-11T00:50:10.681143" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Testcases/ScreenShort/loginlogo.png"&gt;&lt;img src="Testcases/ScreenShort/loginlogo.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>xpath://h2[normalize-space()='Login']</arg>
+<arg>Testcases/ScreenShort/loginlogo.png</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="PASS" start="2024-08-11T00:50:09.800063" elapsed="0.882081"/>
 </kw>
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<arg>id:Skills</arg>
-<arg>Certifications</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="NOT RUN" start="2024-08-10T23:33:17.052194" elapsed="0.000000"/>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-08-11T00:50:10.984142" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Testcases/ScreenShort/pagescreenshot.png"&gt;&lt;img src="Testcases/ScreenShort/pagescreenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Testcases/ScreenShort/pagescreenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-08-11T00:50:10.683141" elapsed="0.301001"/>
 </kw>
-<kw name="Select From List By Index" owner="SeleniumLibrary">
-<arg>id:Skills</arg>
-<arg>3</arg>
-<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<status status="NOT RUN" start="2024-08-10T23:33:17.052194" elapsed="0.000000"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-11T00:50:10.986142" level="INFO">Typing text 'adityapawar180@gmail.com' into text field '//input[@id='username']'.</msg>
+<arg>${email}</arg>
+<arg>adityapawar180@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-11T00:50:10.985142" elapsed="0.313000"/>
 </kw>
-<kw name="Get Selenium Speed" owner="SeleniumLibrary">
-<var>${speed}</var>
-<doc>Gets the delay that is waited after each Selenium command.</doc>
-<status status="NOT RUN" start="2024-08-10T23:33:17.053192" elapsed="0.000000"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-11T00:50:11.300144" level="INFO">Typing text 'Aditya@123' into text field 'xpath://input[@id='password']'.</msg>
+<arg>xpath://input[@id='password']</arg>
+<arg>Aditya@123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-11T00:50:11.300144" elapsed="0.214004"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${speed}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2024-08-10T23:33:17.053192" elapsed="0.001006"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-11T00:50:11.515145" level="INFO">Clicking element 'xpath://input[@name='login']'.</msg>
+<arg>xpath://input[@name='login']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-11T00:50:11.515145" elapsed="1.519892"/>
 </kw>
-<status status="FAIL" start="2024-08-10T23:32:59.576346" elapsed="17.478847">NoSuchElementException: Message: Could not locate element with visible text: Android1; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-</status>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-08-11T00:50:13.072038" level="INFO">Page title is 'My Account – Automation Practice Site'.</msg>
+<arg>My Account – Automation Practice Site</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-08-11T00:50:13.037041" elapsed="0.034997"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-08-11T00:50:13.074032" level="INFO">${"download_text"} = xpath://a[normalize-space()='Downloads']</msg>
+<var>${"download_text"}</var>
+<arg>xpath://a[normalize-space()='Downloads']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-08-11T00:50:13.073032" elapsed="0.001000"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-11T00:50:13.134033" level="INFO">Element 'xpath://a[normalize-space()='Downloads']' is displayed.</msg>
+<arg>${"download_text"}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-11T00:50:13.074032" elapsed="0.060001"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${"download_text"}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-08-11T00:50:13.139033" elapsed="0.823999"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-11T00:50:13.966033" level="INFO">Clicking element 'xpath://a[normalize-space()='Addresses']'.</msg>
+<arg>xpath://a[normalize-space()='Addresses']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-11T00:50:13.966033" elapsed="2.397404"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-11T00:50:16.370442" elapsed="2.726757"/>
+</kw>
+<status status="PASS" start="2024-08-11T00:49:57.412696" elapsed="21.685522"/>
 </test>
-<status status="FAIL" start="2024-08-10T23:32:59.204346" elapsed="17.854849"/>
+<status status="PASS" start="2024-08-11T00:49:56.896656" elapsed="22.204678"/>
 </suite>
-<status status="FAIL" start="2024-08-10T23:32:59.200349" elapsed="17.862847"/>
+<status status="PASS" start="2024-08-11T00:49:56.892646" elapsed="22.212685"/>
 </suite>
-<status status="FAIL" start="2024-08-10T23:32:59.121342" elapsed="17.944853"/>
+<status status="PASS" start="2024-08-11T00:49:56.849646" elapsed="22.259686"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="GAED">GAED</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Testcases">GAED.Testcases</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Implicit Wait">GAED.Testcases.Implicit Wait</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="GAED">GAED</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Testcases">GAED.Testcases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Page Element ScreenShot">GAED.Testcases.Page Element ScreenShot</stat>
 </suite>
 </statistics>
 <errors>
