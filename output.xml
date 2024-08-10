@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.11.5 on win32)" generated="2024-08-10T23:32:59.114347" rpa="false" schemaversion="5">
+<suite id="s1" name="GAED" source="C:\Users\Aditya Pawar\PycharmProjects\GAED">
+<suite id="s1-s1" name="Testcases" source="C:\Users\Aditya Pawar\PycharmProjects\GAED\Testcases">
+<suite id="s1-s1-s1" name="Implicit Wait" source="C:\Users\Aditya Pawar\PycharmProjects\GAED\Testcases\implicit wait.robot">
+<test id="s1-s1-s1-t1" name="Implicit wait statements" line="20">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-10T23:32:59.578339" level="INFO">Opening browser 'chrome' to base url 'https://demo.automationtesting.in/Register.html'.</msg>
+<arg>https://demo.automationtesting.in/Register.html</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-10T23:32:59.578339" elapsed="3.063334"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-10T23:33:02.646672" elapsed="3.600271"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-08-10T23:33:06.247946" elapsed="0.003998"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id:firstpassword</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-08-10T23:33:06.252950" elapsed="0.383300"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-08-10T23:33:06.638253" level="INFO">Selecting options from selection list 'id:Skills' by label Android1.</msg>
+<msg time="2024-08-10T23:33:17.044201" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-08-10T23:33:17.045195" level="FAIL">NoSuchElementException: Message: Could not locate element with visible text: Android1; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+</msg>
+<arg>id:Skills</arg>
+<arg>Android1</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="FAIL" start="2024-08-10T23:33:06.637248" elapsed="10.413951">NoSuchElementException: Message: Could not locate element with visible text: Android1; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+</status>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<arg>id:Skills</arg>
+<arg>Certifications</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" start="2024-08-10T23:33:17.052194" elapsed="0.000000"/>
+</kw>
+<kw name="Select From List By Index" owner="SeleniumLibrary">
+<arg>id:Skills</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="NOT RUN" start="2024-08-10T23:33:17.052194" elapsed="0.000000"/>
+</kw>
+<kw name="Get Selenium Speed" owner="SeleniumLibrary">
+<var>${speed}</var>
+<doc>Gets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2024-08-10T23:33:17.053192" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${speed}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-08-10T23:33:17.053192" elapsed="0.001006"/>
+</kw>
+<status status="FAIL" start="2024-08-10T23:32:59.576346" elapsed="17.478847">NoSuchElementException: Message: Could not locate element with visible text: Android1; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+</status>
+</test>
+<status status="FAIL" start="2024-08-10T23:32:59.204346" elapsed="17.854849"/>
+</suite>
+<status status="FAIL" start="2024-08-10T23:32:59.200349" elapsed="17.862847"/>
+</suite>
+<status status="FAIL" start="2024-08-10T23:32:59.121342" elapsed="17.944853"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="GAED">GAED</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Testcases">GAED.Testcases</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Implicit Wait">GAED.Testcases.Implicit Wait</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
