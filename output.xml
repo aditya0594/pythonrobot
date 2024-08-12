@@ -1,107 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.11.5 on win32)" generated="2024-08-11T00:49:56.841642" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.11.5 on win32)" generated="2024-08-11T19:52:27.668336" rpa="false" schemaversion="5">
 <suite id="s1" name="GAED" source="C:\Users\Aditya Pawar\PycharmProjects\GAED">
 <suite id="s1-s1" name="Testcases" source="C:\Users\Aditya Pawar\PycharmProjects\GAED\Testcases">
-<suite id="s1-s1-s1" name="Page Element ScreenShot" source="C:\Users\Aditya Pawar\PycharmProjects\GAED\Testcases\Page_Element_ScreenShot.robot">
-<test id="s1-s1-s1-t1" name="ScreenShot element" line="9">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-08-11T00:49:57.414691" level="INFO">Opening browser 'chrome' to base url 'https://practice.automationtesting.in/my-account/'.</msg>
-<arg>${url}</arg>
-<arg>${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-08-11T00:49:57.414691" elapsed="11.285207"/>
+<suite id="s1-s1-s1" name="Forloop" source="C:\Users\Aditya Pawar\PycharmProjects\GAED\Testcases\Forloop.robot">
+<test id="s1-s1-s1-t1" name="For Loop 5 for string list using variable" line="23">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-08-11T19:52:27.724010" level="INFO">@{stringList} = [ aditya | smith | john ]</msg>
+<var>@{stringList}</var>
+<arg>aditya</arg>
+<arg>smith</arg>
+<arg>john</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-08-11T19:52:27.723016" elapsed="0.000994"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-08-11T00:50:08.703904" elapsed="0.841162"/>
+<for flavor="IN">
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-08-11T19:52:27.725012" elapsed="0.000998"/>
 </kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-08-11T00:50:09.548063" level="INFO">${email} = //input[@id='username']</msg>
-<var>${email}</var>
-<arg>//input[@id='username']</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-08-11T00:50:09.547063" elapsed="0.001000"/>
+<var name="${i}">aditya</var>
+<status status="PASS" start="2024-08-11T19:52:27.725012" elapsed="0.000998"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-08-11T19:52:27.727015" elapsed="0.000000"/>
 </kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-08-11T00:50:09.798064" level="INFO">Element '//input[@id='username']' is displayed.</msg>
-<arg>${email}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-11T00:50:09.549063" elapsed="0.249001"/>
+<var name="${i}">smith</var>
+<status status="PASS" start="2024-08-11T19:52:27.726010" elapsed="0.001005"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-08-11T19:52:27.728015" elapsed="0.000000"/>
 </kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-08-11T00:50:10.681143" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Testcases/ScreenShort/loginlogo.png"&gt;&lt;img src="Testcases/ScreenShort/loginlogo.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>xpath://h2[normalize-space()='Login']</arg>
-<arg>Testcases/ScreenShort/loginlogo.png</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-08-11T00:50:09.800063" elapsed="0.882081"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-08-11T00:50:10.984142" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Testcases/ScreenShort/pagescreenshot.png"&gt;&lt;img src="Testcases/ScreenShort/pagescreenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>Testcases/ScreenShort/pagescreenshot.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-08-11T00:50:10.683141" elapsed="0.301001"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-08-11T00:50:10.986142" level="INFO">Typing text 'adityapawar180@gmail.com' into text field '//input[@id='username']'.</msg>
-<arg>${email}</arg>
-<arg>adityapawar180@gmail.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-11T00:50:10.985142" elapsed="0.313000"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-08-11T00:50:11.300144" level="INFO">Typing text 'Aditya@123' into text field 'xpath://input[@id='password']'.</msg>
-<arg>xpath://input[@id='password']</arg>
-<arg>Aditya@123</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-11T00:50:11.300144" elapsed="0.214004"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-11T00:50:11.515145" level="INFO">Clicking element 'xpath://input[@name='login']'.</msg>
-<arg>xpath://input[@name='login']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-11T00:50:11.515145" elapsed="1.519892"/>
-</kw>
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2024-08-11T00:50:13.072038" level="INFO">Page title is 'My Account – Automation Practice Site'.</msg>
-<arg>My Account – Automation Practice Site</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2024-08-11T00:50:13.037041" elapsed="0.034997"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-08-11T00:50:13.074032" level="INFO">${"download_text"} = xpath://a[normalize-space()='Downloads']</msg>
-<var>${"download_text"}</var>
-<arg>xpath://a[normalize-space()='Downloads']</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-08-11T00:50:13.073032" elapsed="0.001000"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-08-11T00:50:13.134033" level="INFO">Element 'xpath://a[normalize-space()='Downloads']' is displayed.</msg>
-<arg>${"download_text"}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-11T00:50:13.074032" elapsed="0.060001"/>
-</kw>
-<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
-<arg>${"download_text"}</arg>
-<doc>Verifies that element identified by ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-08-11T00:50:13.139033" elapsed="0.823999"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-11T00:50:13.966033" level="INFO">Clicking element 'xpath://a[normalize-space()='Addresses']'.</msg>
-<arg>xpath://a[normalize-space()='Addresses']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-11T00:50:13.966033" elapsed="2.397404"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-08-11T00:50:16.370442" elapsed="2.726757"/>
-</kw>
-<status status="PASS" start="2024-08-11T00:49:57.412696" elapsed="21.685522"/>
+<var name="${i}">john</var>
+<status status="PASS" start="2024-08-11T19:52:27.728015" elapsed="0.000000"/>
+</iter>
+<var>${i}</var>
+<value>@{stringList}</value>
+<status status="PASS" start="2024-08-11T19:52:27.725012" elapsed="0.003998"/>
+</for>
+<status status="PASS" start="2024-08-11T19:52:27.722009" elapsed="0.008001"/>
 </test>
-<status status="PASS" start="2024-08-11T00:49:56.896656" elapsed="22.204678"/>
+<status status="PASS" start="2024-08-11T19:52:27.718974" elapsed="0.014041"/>
 </suite>
-<status status="PASS" start="2024-08-11T00:49:56.892646" elapsed="22.212685"/>
+<status status="PASS" start="2024-08-11T19:52:27.714889" elapsed="0.021120"/>
 </suite>
-<status status="PASS" start="2024-08-11T00:49:56.849646" elapsed="22.259686"/>
+<status status="PASS" start="2024-08-11T19:52:27.674083" elapsed="0.065508"/>
 </suite>
 <statistics>
 <total>
@@ -112,7 +62,7 @@
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="GAED">GAED</stat>
 <stat pass="1" fail="0" skip="0" id="s1-s1" name="Testcases">GAED.Testcases</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Page Element ScreenShot">GAED.Testcases.Page Element ScreenShot</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Forloop">GAED.Testcases.Forloop</stat>
 </suite>
 </statistics>
 <errors>
