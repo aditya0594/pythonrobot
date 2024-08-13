@@ -46,3 +46,20 @@ Login
 	Click Element    xpath://input[@name='login']
 
 
+
+Wait statements
+	Open Browser    https://demo.automationtesting.in/Register.html     chrome
+    Maximize Browser Window
+    Set Selenium Timeout    10  #it will wait for 10 for the only for the element
+    Wait Until Element Is Visible   xpath://h2[normalize-space()='Register']   # default timeout is 5 seconds
+
+    ${speed}    Get Selenium Speed
+    Log To Console    ${speed}
+    Set Selenium Speed    2   #it will applicable for every steps of the script
+    #Select From List By Value
+    Scroll Element Into View    id:firstpassword
+    Select From List By Label   id:Skills   Android
+    Select From List By Value    id:Skills  Certifications
+    Select From List By Index    id:Skills  3
+    ${speed}    Get Selenium Speed
+    Log To Console    ${speed}

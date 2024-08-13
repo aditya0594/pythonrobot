@@ -1,57 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.11.5 on win32)" generated="2024-08-11T19:52:27.668336" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.11.5 on win32)" generated="2024-08-13T23:31:31.355096" rpa="false" schemaversion="5">
 <suite id="s1" name="GAED" source="C:\Users\Aditya Pawar\PycharmProjects\GAED">
 <suite id="s1-s1" name="Testcases" source="C:\Users\Aditya Pawar\PycharmProjects\GAED\Testcases">
-<suite id="s1-s1-s1" name="Forloop" source="C:\Users\Aditya Pawar\PycharmProjects\GAED\Testcases\Forloop.robot">
-<test id="s1-s1-s1-t1" name="For Loop 5 for string list using variable" line="23">
-<kw name="Create List" owner="BuiltIn">
-<msg time="2024-08-11T19:52:27.724010" level="INFO">@{stringList} = [ aditya | smith | john ]</msg>
-<var>@{stringList}</var>
-<arg>aditya</arg>
-<arg>smith</arg>
-<arg>john</arg>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2024-08-11T19:52:27.723016" elapsed="0.000994"/>
+<suite id="s1-s1-s1" name="HTML table" source="C:\Users\Aditya Pawar\PycharmProjects\GAED\Testcases\HTML_table.robot">
+<test id="s1-s1-s1-t1" name="Validate a table" line="27">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-13T23:31:31.895095" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<arg>https://testautomationpractice.blogspot.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-13T23:31:31.894097" elapsed="10.182017"/>
 </kw>
-<for flavor="IN">
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-08-11T19:52:27.725012" elapsed="0.000998"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-13T23:31:42.077110" elapsed="0.064998"/>
 </kw>
-<var name="${i}">aditya</var>
-<status status="PASS" start="2024-08-11T19:52:27.725012" elapsed="0.000998"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-08-11T19:52:27.727015" elapsed="0.000000"/>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-08-13T23:31:42.142108" elapsed="0.010016"/>
 </kw>
-<var name="${i}">smith</var>
-<status status="PASS" start="2024-08-11T19:52:27.726010" elapsed="0.001005"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-08-11T19:52:27.728015" elapsed="0.000000"/>
+<kw name="Table Column Should Contain" owner="SeleniumLibrary">
+<arg>xpath://table[@name="BookTable"]</arg>
+<arg>1</arg>
+<arg>Book</arg>
+<doc>Verifies table column contains text ``expected``.</doc>
+<status status="PASS" start="2024-08-13T23:31:42.158128" elapsed="0.121982"/>
 </kw>
-<var name="${i}">john</var>
-<status status="PASS" start="2024-08-11T19:52:27.728015" elapsed="0.000000"/>
-</iter>
-<var>${i}</var>
-<value>@{stringList}</value>
-<status status="PASS" start="2024-08-11T19:52:27.725012" elapsed="0.003998"/>
-</for>
-<status status="PASS" start="2024-08-11T19:52:27.722009" elapsed="0.008001"/>
+<kw name="Table Row Should Contain" owner="SeleniumLibrary">
+<arg>xpath://table[@name="BookTable"]</arg>
+<arg>4</arg>
+<arg>Learn JS</arg>
+<doc>Verifies that table row contains text ``expected``.</doc>
+<status status="PASS" start="2024-08-13T23:31:42.281110" elapsed="0.072998"/>
+</kw>
+<kw name="Table Cell Should Contain" owner="SeleniumLibrary">
+<msg time="2024-08-13T23:31:47.479503" level="INFO">Table cell contains 'Mukesh'.</msg>
+<arg>xpath://table[@name="BookTable"]</arg>
+<arg>5</arg>
+<arg>2</arg>
+<arg>Mukesh</arg>
+<doc>Verifies table cell contains text ``expected``.</doc>
+<status status="PASS" start="2024-08-13T23:31:42.354108" elapsed="5.125395"/>
+</kw>
+<kw name="Table Header Should Contain" owner="SeleniumLibrary">
+<arg>xpath://table[@name="BookTable"]</arg>
+<arg>BookName</arg>
+<doc>Verifies table header contains text ``expected``.</doc>
+<status status="PASS" start="2024-08-13T23:31:47.480501" elapsed="0.073018"/>
+</kw>
+<status status="PASS" start="2024-08-13T23:31:31.891098" elapsed="15.662421"/>
 </test>
-<status status="PASS" start="2024-08-11T19:52:27.718974" elapsed="0.014041"/>
+<status status="PASS" start="2024-08-13T23:31:31.412098" elapsed="16.144416"/>
 </suite>
-<status status="PASS" start="2024-08-11T19:52:27.714889" elapsed="0.021120"/>
+<status status="PASS" start="2024-08-13T23:31:31.408099" elapsed="16.151411"/>
 </suite>
-<status status="PASS" start="2024-08-11T19:52:27.674083" elapsed="0.065508"/>
+<status status="PASS" start="2024-08-13T23:31:31.359104" elapsed="16.203406"/>
 </suite>
 <statistics>
 <total>
@@ -62,7 +66,7 @@
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="GAED">GAED</stat>
 <stat pass="1" fail="0" skip="0" id="s1-s1" name="Testcases">GAED.Testcases</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Forloop">GAED.Testcases.Forloop</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="HTML table">GAED.Testcases.HTML table</stat>
 </suite>
 </statistics>
 <errors>

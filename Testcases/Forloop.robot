@@ -27,4 +27,8 @@ For Loop 5 for string list using variable
 	END
 
 For loop 6 with condition
-	@{value}
+	@{value}=   Create List     1   2   3   4
+	FOR    ${i}     IN    @{value}
+	Exit For Loop If    ${i}==2
+	Log To Console    ${i}
+	END
